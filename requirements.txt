@@ -1,0 +1,4 @@
+pytelegrambotapi
+python-telegram-bot
+sklearn
+filetype
