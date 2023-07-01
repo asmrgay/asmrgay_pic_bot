@@ -246,7 +246,8 @@ def gotFile(message):
            types = message.document.mime_type
            fileID = message.document.file_id
            target=Upload(userID,Name,fileID)
-           bot.reply_to(message, target)
+           reply_message = f"`{target}`"
+           bot.reply_to(message, reply_message, parse_mode='Markdown')
          else:
            bot.reply_to(message, '超出上传范围，文件过大:TOO LARGE')
     else:
