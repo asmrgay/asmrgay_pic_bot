@@ -11,6 +11,8 @@ joblib.dump("on", 'life.pkl')
 import linecache
 
 #====================================================
+bot_api_token = ''
+#====================================================
 
 def get_line_count(filename):
     count = 0
@@ -149,7 +151,9 @@ def workPhoto(userID,fileID, road):
 
 
 count=CallingCounter()
-bot = telebot.TeleBot("61712xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxeRw")
+if not bot_api_token:
+    bot_api_token=input("Input bot_api_toke: ")
+bot = telebot.TeleBot(bot_api_token)
 isExist = os.path.exists(getRoot())
 if not isExist:
     os.makedirs(getRoot())
