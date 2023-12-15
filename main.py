@@ -81,7 +81,7 @@ class test(object):
              except:
                 codes=000
              if codes==200:
-               target='https://i'+str(random.randint(0,3))+'.wp.com/telegra.ph'+response.json()[0]['src']
+               target='https://i'+str(random.randint(0,3))+'.wp.com/telegra.vercel.app'+response.json()[0]['src']
              else:
                target=False
              return target
